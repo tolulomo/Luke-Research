@@ -24,6 +24,13 @@ This exercise is meant to see what considerations you take into account when imp
 
 - Create tests for the application
 
+#### Tools Used in Assessing this Evaluation
+Lighthouse
+https://developers.google.com/web/tools/lighthouse/v3/scoring
+
+complexity-report
+https://www.npmjs.com/package/complexity-report#software-complexity-analysis
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
