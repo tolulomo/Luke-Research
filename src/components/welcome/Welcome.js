@@ -14,7 +14,7 @@ const Dashboard = () => {
           <div className="row row--gutter">
             <div className="column-2-of-4">
               <div className="dashboard__card">
-                <div className="dashboard__card--status dashboard__card--status-inactive">Inactive</div>
+                <div className="dashboard__card--status u-inactive">Inactive</div>
                 <div className="dashboard__card__side dashboard__card__side--front">
                   <div className="dashboard__card-picture">
                       
@@ -43,7 +43,7 @@ const Dashboard = () => {
             </div>
             <div className="column-2-of-4">
               <div className="dashboard__card">
-                <div className="dashboard__card--status dashboard__card--status-active">Active</div>
+                <div className="dashboard__card--status u-active">Active</div>
                 <div className="dashboard__card__side dashboard__card__side--front">
                   <div className="dashboard__card-picture">
                       

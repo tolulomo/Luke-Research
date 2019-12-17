@@ -1,0 +1,176 @@
+.project {
+    position: relative;
+
+    &--side-pane {
+        position: absolute;
+        height: 49rem;
+        left: 0;
+        top: 0;
+        max-width: 1.5rem;
+        padding: .5rem;
+        background-color: $colorPrimary;
+    }
+
+    &--indicator {
+        position: absolute;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-image: linear-gradient(to left bottom, $colorPrimary, $colorPrimary);
+        height: 2rem;
+        width: 2rem;
+        top: 2.2rem;
+        left: .8rem;
+        transform: rotate(90deg);
+        
+    }
+
+    &__details {
+        margin: 1rem 0;
+        padding-left: 3rem;
+
+        h2 {
+            line-height: 1;
+            font-size: 4rem;
+            font-weight: 300;
+            color: $colorPrimary
+        }
+
+        &--status {
+            margin-top: .5rem;
+            font-size: 1.2rem;
+            line-height: 1;
+
+            span {
+                margin: .3rem .5rem 0 .4rem;
+                float: left;
+                height: .8rem;
+                width: .8rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    ul {
+        animation: moveInRight-2 1s ease-out;
+        margin-top: 2.5rem;
+        text-align: right;
+        li {
+            list-style: none;
+            display: inline-block;
+            
+            &:not(:last-child){
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    &__chip {
+        ul {
+           text-align: center;
+        }
+        
+        &-list {
+            list-style: none;
+            padding: 1rem 5rem;
+            border: .05rem solid $textColor;
+            color: $colorPrimary;
+            display: inline-block;
+            background-color: $textColor;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+        }
+    }
+
+    &__user-list {
+        margin-top: 4rem;
+        padding-left: 3rem;
+        padding-right: 1rem;;
+        h2 {
+            line-height: 1;
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: $colorPrimary
+        }
+
+        &--table {
+            margin-top: 1rem;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            animation: zoomInBottom 1s ease-out;
+
+            th {
+                padding: 1rem;
+                background-color: $colorPrimaryDark;
+                line-height: 12px;
+                text-transform: uppercase;
+                color: $textColor;
+                width: 10%;
+                text-align: center;
+
+                &:not(:last-child) {
+                    width: 30%;
+                }
+
+                &:first-child {
+                    text-align: left;
+                }
+            }
+
+            td {
+                padding: 1rem;
+                line-height: 12px;
+                width: 10%;
+                text-align: center;
+                border-bottom: .2rem solid $textColor;
+
+                &:not(:last-child) {
+                    width: 30%;
+                }
+
+                &:first-child {
+                    padding-left: 1rem;
+                    text-align: left;
+                }
+            }
+
+            & tr:nth-child(odd){
+                background-color: rgba($colorLighter, .6);
+            }
+            & tr:nth-child(even){
+                background-color: rgba($colorLighter, .2);
+            }
+
+            & tfoot > tr > td {
+                font-weight: 300;
+                background-color: rgba($color-black, .8);
+                color: $textColor;
+                text-align: center !important;
+                border-bottom: .2rem solid $colorLighter;
+            }
+        }
+    }
+
+    &__footer{
+        padding: 3rem 1rem 0 0;
+        float: right;
+        animation: zoomInBottom 1s ease-out;
+    }
+
+    &__form {
+        margin: 4rem 0 0 2rem;
+        padding: 0 5rem 0 0;
+
+        &--role{
+            h2 {
+                line-height: 1;
+                font-size: 2.5rem;
+                font-weight: 200;
+                color: $colorPrimary
+            }
+
+            li {
+                width:30.3%;
+                list-style: none;
+            }
+        }
+    }
+}

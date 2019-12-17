@@ -4,6 +4,9 @@
 @import 'base/_global.css';
 @import 'base/_grid.css';
 @import 'base/_utility.css';
+@import 'components/_button.css';
 @import 'components/_floatingBtn.css';
+@import 'components/_form.css';
 @import 'components/_header.css';
+@import 'components/_project.css';
 @import 'components/_welcomePage.css';

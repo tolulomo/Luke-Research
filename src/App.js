@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import { Welcome, Header } from './components';
-
-const Project = () => <div>Project</div>
-const AddProject = () => <div>Add Project</div>
-const AddUser = () => <div>Add User Page</div>
-
+import { Welcome, Header, Project, CreateProject, AddUser } from './components';
 
 class App extends Component {
   render() {
@@ -17,7 +12,7 @@ class App extends Component {
             <Header />
             <Route exact path="/" component={Welcome} />
             <Route exact path="/project" component={Project} />
-            <Route path="/project/new" component={AddProject} />
+            <Route path="/project/new" component={CreateProject} />
             <Route path="/project/add_user" component={AddUser} />
           </div>
         </BrowserRouter>

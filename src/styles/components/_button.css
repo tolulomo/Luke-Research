@@ -1,0 +1,33 @@
+.button {
+    text-decoration: none;
+    padding: 1rem 5rem;
+    border: .2rem solid $textColor;
+    color: $textColor;
+    transition: all .3s ease-out;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $textColor;
+        color: $colorPrimary;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    &--blue {
+        border: .2rem solid $colorPrimary;
+        color: $colorPrimary;
+
+        &:hover{
+            border: .2rem solid $accentColor;
+            color: $accentColor;
+        }
+    }
+
+    &--submit {
+        &:hover{
+            background-color: $colorLighter;
+            border: .2rem solid $colorPrimary;
+            color: $textColor;
+        }
+    }
+
+}

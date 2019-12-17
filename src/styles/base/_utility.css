@@ -16,7 +16,46 @@
     }
 }
 
-.u__af {
-    color: $colorPrimary;
-    font-weight: 400;
+.u {
+
+    &__af {
+        color: $colorPrimary;
+        font-weight: 400;
+    }
+
+    &__stage {
+        width: 100%;
+        margin-top: 8rem;
+        height: 50rem;
+        background-color: $textColor;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    &-active {
+        color: $colorStatus;
+
+        span {
+            background-color: $colorStatus;
+        }
+    }
+    &-inactive {
+        color: $accentColor-2;
+
+        span {
+            background-color: $accentColor;
+        }
+    }
+
+    &__padding-top {
+        padding-top: 1rem;
+    }
+
+    &__to-top {
+        z-index: 10;
+    }
+
+    &__accent {
+        color: $colorPrimaryDark;
+        font-weight: 300;
+    }
 }
