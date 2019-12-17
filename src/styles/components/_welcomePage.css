@@ -1,0 +1,191 @@
+.dashboard {
+    margin-top: 8rem;
+
+    &--welcome-text {
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            color: $colorPrimary
+        }
+    }
+
+    &__project-container {
+        position: relative;
+        margin: 6rem 0 2rem 0;
+    }
+
+    &__card {
+        /* FUNCTIONALITY */
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        position: relative;
+        height: 32rem;
+
+        &--status {
+            position: absolute;
+            top: .8rem;
+            right: .8rem;
+            
+            z-index: 1;
+            animation: fadeIn 3s ease-out;
+
+            &-active {
+                color: $colorStatus;
+            }
+            &-inactive {
+                color: $accentColor-2;
+            }
+        }
+
+        &__side {
+            height: 32rem;
+            transition: all .8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    
+            &--front {
+                background-color: $textColor;
+            }
+    
+            &--back {
+                transform: rotateY(180deg);
+                background-image: linear-gradient(to right bottom, $colorLighter, $colorPrimary);
+            }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(-180deg);
+        }
+    
+        &:hover &__side--back {
+            transform: rotateY(0);
+        }
+
+        &:hover &--status {
+            display: none;
+        }
+
+        &-picture {
+            background-size: cover;
+            height: 23rem;
+            background-blend-mode: screen;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background-image: linear-gradient(to right bottom, $colorPrimary, $colorLighter);
+        }
+        
+        &__heading {
+            font-size: 2.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-align: right;
+            color: $textColor;
+            position: absolute;
+            bottom: 13rem;
+            right: 2rem;
+            width: 75%;
+        
+        }
+    
+        &__heading-span {
+            padding: 1rem 1.5rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            background-image: linear-gradient(to right bottom, 
+            rgba($colorLighter, .85), 
+            rgba($colorPrimary, .85));
+        }
+
+        &--details {
+            padding: 0 2rem;
+    
+            ul {
+                list-style: none;
+                width: 80%;
+                margin: 0 auto;
+    
+                li {
+                    text-align: center;
+                    font-size: 1rem;
+                    padding: .5rem 1rem;
+    
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgba($color-black, .15);
+                    }
+                }
+            }
+        }
+
+        &--back {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            text-align: center;
+
+            &-box{
+                text-align: center;
+                color: $textColor;
+                margin-bottom: 8rem;
+                position: relative;
+            }
+        }
+
+        &--visit {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+
+            &-link {
+                position: absolute;
+                text-decoration: none;
+                left: 50;
+                transform: translateX(-50%);
+                top: 20rem;
+                padding: 1rem 5rem;
+                border: .2rem solid $textColor;
+                color: $textColor;
+                transition: all .3s ease-out;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $textColor;
+                    color: $colorPrimary;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                }
+            }
+        }
+
+        &--page {
+            font-size: 6rem;
+            font-weight: 100;
+            line-height: 1;
+        }
+    }
+
+    &--status-message {
+        text-align: center;
+        font-weight: 300;
+    }
+
+    &--float-right {
+        text-align: right;
+        cursor: pointer;
+    }
+
+    &--float-left {
+        text-align: left;
+        cursor: pointer;
+    }
+}

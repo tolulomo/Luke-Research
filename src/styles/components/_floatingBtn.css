@@ -1,0 +1,51 @@
+.floating-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    &--link {
+        text-decoration: none;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        color: $textColor;
+        background-color: $colorPrimary;
+        display: flex;
+        margin-bottom: 1rem;
+        position: relative;
+        transform-origin: 50% 50%;
+        animation: moveInRight 1s ease-out;
+        transition: all .3s ease-out;
+
+        @mixin atSmall {
+            height: 4rem;
+            width: 4rem;
+        }
+
+        span {
+            font-size: 2rem;
+            font-weight: 400;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover{
+            background-color: $accentColor;
+            transform: rotate(360deg);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
+
+    &--rotate {
+        font-weight: 200;
+        transform: rotate(90deg);
+
+        &:hover{
+            background-color: $accentColor;
+            transform: rotate(450deg);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
+}

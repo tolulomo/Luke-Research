@@ -1,12 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App snapshot renders 1`] = `
-<div>
+<div
+  className="main"
+>
   <div>
-    Header
-  </div>
-  <div>
-    Welcome
+    <div>
+      Header
+    </div>
+    <main
+      className="container"
+    >
+      <div
+        className="floating-btn"
+      >
+        <a
+          className="floating-btn--link"
+          href="/"
+          onClick={[Function]}
+        >
+          -
+        </a>
+        <a
+          className="floating-btn--link"
+          href="/"
+          onClick={[Function]}
+        >
+          +
+        </a>
+      </div>
+    </main>
   </div>
 </div>
 `;

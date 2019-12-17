@@ -1,0 +1,89 @@
+.row {
+    
+    @mixin clearfix {
+
+    }
+    &--flex {
+        @mixin atMedium {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
+
+    &--gutter > div {
+        &:not(:last-child){
+            @mixin atMedium {
+                padding-right: .8rem;
+            }
+        }
+    }
+    
+
+    &--insert-top-padding {
+        padding-top: 5.6rem;
+    }
+
+    &--spacing > div {
+        &:not(:last-child){
+            margin: 0 0 6rem 0;
+        }
+
+        @mixin atMedium {
+            &:not(:last-child){
+                margin: 0;
+            }
+        }
+    }
+}
+
+.column-1-of-3 {
+    @mixin atMedium {
+        float: left;
+        width: 33.3333%;
+    }
+
+    &--enlarge {
+        @mixin atMedium {
+            width: 34%;
+        } 
+    }
+}
+
+.column-1-of-4 {
+    @mixin atMedium {
+        float: left;
+        width: 25%;
+    }
+
+    &--enlarge {
+        @mixin atMedium {
+            width: 29%;
+        } 
+    }
+}
+
+
+
+.column-2-of-4 {
+    @mixin atMedium {
+        float: left;
+        width: 49%; 
+    }
+}
+
+.column-3-of-4 {
+    @mixin atMedium {
+        float: left;
+        width: 50%; 
+    }
+
+    &--reduce {
+        @mixin atMedium {
+            width: 71%;
+        }   
+    }
+}

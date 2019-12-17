@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-const Header = () => <div>Header</div>
-const Welcome = () => <div>Welcome</div>
+import { Welcome, Header } from './components';
+
 const Project = () => <div>Project</div>
 const AddProject = () => <div>Add Project</div>
 const AddUser = () => <div>Add User Page</div>
@@ -11,15 +11,17 @@ const AddUser = () => <div>Add User Page</div>
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <Header />
-          <Route exact path="/" component={Welcome} />
-          <Route exact path="/project" component={Project} />
-          <Route path="/project/new" component={AddProject} />
-          <Route path="/project/add_user" component={AddUser} />
-        </div>
-      </BrowserRouter>
+      <div className="main">
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Route exact path="/" component={Welcome} />
+            <Route exact path="/project" component={Project} />
+            <Route path="/project/new" component={AddProject} />
+            <Route path="/project/add_user" component={AddUser} />
+          </div>
+        </BrowserRouter>
+      </div>
     );
   }
 }
