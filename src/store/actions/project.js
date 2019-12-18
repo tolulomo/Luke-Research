@@ -2,8 +2,6 @@ export const DELETE_USER = 'DELETE_USER';
 
 export const CREATE_PROJECT = 'CREATE_PROJECT';
 export const DELETE_PROJECT = 'DELETE_PROJECT';
-export const FILTER_PREV = 'FILTER_PREV';
-export const FILTER_NEXT = 'FILTER_NEXT';
 export const FETCH_PROJECT = 'FETCH_PROJECT';
 export const DEACTIVATE = 'DEACTIVATE';
 
@@ -25,14 +23,6 @@ export const createProject = ({name, sponsor, sdate, edate}) => dispatch => {
       edate,
     }
   });
-};
-
-export const filterPrev = () => async dispatch => { 
-  dispatch({ type: FILTER_PREV });
-};
-
-export const filterNext = () => {
-  return { type: FILTER_NEXT };
 };
 
 export const fetchProject = pid => async dispatch => { 

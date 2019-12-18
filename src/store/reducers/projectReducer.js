@@ -5,8 +5,7 @@ import { PROJECTS, USERS } from '../../data';
 import ProjectLogics from '../../models/ProjectLogic';
 import UserLogics from '../../models/UserLogic';
 import { CREATE_USER } from '../actions/users';
-import { Paginator } from '../../components';
-import { CREATE_PROJECT, DELETE_PROJECT, FILTER_PREV, FILTER_NEXT, FETCH_PROJECT, DEACTIVATE, DELETE_USER } from '../actions/project';
+import { CREATE_PROJECT, DELETE_PROJECT, FETCH_PROJECT, DEACTIVATE, DELETE_USER } from '../actions/project';
 
 const initialState = {
     projects: _.map(PROJECTS, (value) => value),
@@ -18,7 +17,6 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
-    console.log(state.projects)
     switch (action.type) {
       case CREATE_PROJECT:
             const newProject = new ProjectLogics(
@@ -41,21 +39,6 @@ export default (state = initialState, action) => {
                 project => project.id !== action.pid
             ),
             availableProjects: _.chunk(state.projects,2)
-        }
-    case FILTER_PREV:
-        const totalPages = state.availableProjects.length/2
-        return {
-            ...state,
-            currentView: state.currentView < totalPages & totalPages > 1 ? state.currentView - 1 : 
-            state.currentView === totalPages && totalPages > 1 ? state.currentView - 1 :0
-        }
-    case FILTER_NEXT:
-        const totalPage = state.availableProjects.length/2
-        
-        return {
-            ...state,
-            currentView: state.currentView === 1 && totalPage > 1 ? state.currentView + 1 : 
-            state.currentView < totalPage ? state.currentView + 1 : 0
         }
     case FETCH_PROJECT:
         return {
