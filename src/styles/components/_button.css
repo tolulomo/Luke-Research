@@ -30,4 +30,9 @@
         }
     }
 
+    &--extra {
+        font-size: 1rem;
+        background-color: $textColor;
+    }
+
 }

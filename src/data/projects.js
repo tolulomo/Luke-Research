@@ -1,4 +1,4 @@
-export const PROJECTS = {
+const PROJECTS = {
   1: {
     name: "CAN",
     id: 1,
@@ -24,3 +24,5 @@ export const PROJECTS = {
     project_end_date: "10/1/2027"
   }
 };
+
+export default PROJECTS;

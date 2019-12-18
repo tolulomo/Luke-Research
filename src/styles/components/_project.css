@@ -47,6 +47,15 @@
                 border-radius: 50%;
             }
         }
+       
+    }
+
+    &__delete {
+        cursor: pointer;
+        &:hover {
+            color: $accentColor;
+        }
+            
     }
 
     ul {

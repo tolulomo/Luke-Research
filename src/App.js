@@ -11,9 +11,9 @@ class App extends Component {
           <div>
             <Header />
             <Route exact path="/" component={Welcome} />
-            <Route exact path="/project" component={Project} />
-            <Route path="/project/new" component={CreateProject} />
-            <Route path="/project/add_user" component={AddUser} />
+            <Route exact path="/add_user/:id" component={AddUser} />
+            <Route exact path="/new" component={CreateProject} />
+            <Route exact path="/project/:id" component={Project} />
           </div>
         </BrowserRouter>
       </div>
@@ -22,25 +22,3 @@ class App extends Component {
 }
 
 export default App;
-
-// import React from "react";
-// import "./App.css";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <h3>
-//           Let's create a view that displays user data grouped by the project
-//           each user is working on.
-//         </h3>
-//         <p>
-//           Start by looking at <code>src/mock_data/users.js</code> and{" "}
-//           <code>src/mock_data/projects.js</code>.
-//         </p>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -69,7 +69,10 @@
 
 
 .column-2-of-4 {
+    width: 80%;
+    margin: 1rem auto 4rem auto;
     @mixin atMedium {
+        margin: 0;
         float: left;
         width: 49%; 
     }

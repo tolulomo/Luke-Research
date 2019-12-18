@@ -21,6 +21,26 @@
     &__af {
         color: $colorPrimary;
         font-weight: 400;
+
+        button {
+            background-color: transparent;
+            border: none;
+            text-decoration: none;
+            color: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+
+            &:hover{
+                color: $colorPrimaryDark;
+                font-weight: 400;
+            }
+
+            &:active{
+                border: none;
+            }
+        }
+
+
     }
 
     &__stage {
@@ -39,6 +59,21 @@
         }
     }
     &-inactive {
+        color: $accentColor-2;
+
+        span {
+            background-color: $accentColor;
+        }
+    }
+
+    &-true {
+        color: $colorStatus;
+
+        span {
+            background-color: $colorStatus;
+        }
+    }
+    &-false {
         color: $accentColor-2;
 
         span {

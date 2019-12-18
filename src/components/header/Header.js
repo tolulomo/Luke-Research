@@ -12,7 +12,7 @@ const Header = () => {
             <nav className="navigation--list">
                 <ul>
                     <li>
-                        <Link to="/project/new">Create New Project</Link>
+                        <Link to="/new">Create New Project</Link>
                     </li>
                 </ul>
             </nav>

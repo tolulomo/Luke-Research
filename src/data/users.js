@@ -1,4 +1,4 @@
-export const USERS = {
+const USERS = {
   1: {
     id: 1,
     name: "Mark",
@@ -70,3 +70,5 @@ export const USERS = {
     role: "Key Personnel"
   }
 };
+
+export default USERS;
