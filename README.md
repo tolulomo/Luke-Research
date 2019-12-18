@@ -1,3 +1,23 @@
+## Script
+
+"build:css": "postcss src/styles/App.css -o src/style.css",
+"watch:css": "postcss src/styles/App.css -o src/style.css -w",
+"start:app": "react-scripts start",
+"start": "npm-run-all -p watch:css start:app",
+"build:app": "react-scripts build",
+"build": "npm-run-all build:css build:app",
+
+run `npm run start:app` to start the app. Granularity is key for me. For my all my projects, I set up my webpack, babel or gulp as the case might be and configure it to sooth project needs.
+
+## My discovery
+Running lighthouse audit on my local computer reveals the following, 
+- Performance - Bundling and minification and tree-shaking will resolve the performance issues. The web app isn't bundled yet.
+- Accessibility - My colors and gradient designs were chosen to offer sufficient contrast and the card flips with a bigger select button at the back to navigate to the project page.
+
+## Misc
+Redux was used for state management to ensure pure functional component. In some component, the component state are used to handle form submission.
+
+
 ## Scenario
 
 Implement a view that displays both user and project data from `src/mock_data/*`, and allows for adding and removing users and projects.
