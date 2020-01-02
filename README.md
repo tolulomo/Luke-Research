@@ -7,7 +7,7 @@
 - "build:app": "react-scripts build",
 - "build": "npm-run-all build:css build:app",
 
-run `npm run start:app` to start the app. Granularity is key for me. For my all my projects, I set up my webpack, babel or gulp as the case might be and configure it to sooth project needs.
+run `npm run start:app` to start the app. 
 
 
 ## Misc
